@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Create a Show Time">
+        <lightning-record-form
+            record-id={recordId}
+            object-api-name={showTimeObject}
+            fields={myFields}
+            columns="2"
+            oncancel={handleCancel}
+            onsuccess={handleShowTimeCreated}>
+           
+        </lightning-record-form>
+    </lightning-card>
+</template>

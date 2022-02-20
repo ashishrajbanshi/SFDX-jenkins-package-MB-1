@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Patient_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Address</label>
+        <length>100</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Blood_Group__c</fullName>
+        <externalId>false</externalId>
+        <label>Blood Group</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AB+</fullName>
+                    <default>false</default>
+                    <label>AB+</label>
+                </value>
+                <value>
+                    <fullName>AB-</fullName>
+                    <default>false</default>
+                    <label>AB-</label>
+                </value>
+                <value>
+                    <fullName>A+</fullName>
+                    <default>false</default>
+                    <label>A+</label>
+                </value>
+                <value>
+                    <fullName>A-</fullName>
+                    <default>false</default>
+                    <label>A-</label>
+                </value>
+                <value>
+                    <fullName>B+</fullName>
+                    <default>false</default>
+                    <label>B+</label>
+                </value>
+                <value>
+                    <fullName>B-</fullName>
+                    <default>false</default>
+                    <label>B-</label>
+                </value>
+                <value>
+                    <fullName>O+</fullName>
+                    <default>false</default>
+                    <label>O+</label>
+                </value>
+                <value>
+                    <fullName>O-</fullName>
+                    <default>false</default>
+                    <label>O-</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contact_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Number</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Birth__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Birth</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Doctor_Available__c</fullName>
+        <externalId>false</externalId>
+        <label>Doctor Available</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Specialist_Available__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Dr. Bhanu Prakash</fullName>
+                    <default>false</default>
+                    <label>Dr. Bhanu Prakash</label>
+                </value>
+                <value>
+                    <fullName>Dr. Bikash Nepal</fullName>
+                    <default>false</default>
+                    <label>Dr. Bikash Nepal</label>
+                </value>
+                <value>
+                    <fullName>Dr. Bilash Gautam</fullName>
+                    <default>false</default>
+                    <label>Dr. Bilash Gautam</label>
+                </value>
+                <value>
+                    <fullName>Dr. Bishal Raj</fullName>
+                    <default>false</default>
+                    <label>Dr. Bishal Raj</label>
+                </value>
+                <value>
+                    <fullName>Dr. Gautam Yadav</fullName>
+                    <default>false</default>
+                    <label>Dr. Gautam Yadav</label>
+                </value>
+                <value>
+                    <fullName>Dr. Gyanu Prasad</fullName>
+                    <default>false</default>
+                    <label>Dr. Gyanu Prasad</label>
+                </value>
+                <value>
+                    <fullName>Dr. Himanshu Pradhan</fullName>
+                    <default>false</default>
+                    <label>Dr. Himanshu Pradhan</label>
+                </value>
+                <value>
+                    <fullName>Dr. Hiralal Jadav</fullName>
+                    <default>false</default>
+                    <label>Dr. Hiralal Jadav</label>
+                </value>
+                <value>
+                    <fullName>Dr. Keshav Bhandari</fullName>
+                    <default>false</default>
+                    <label>Dr. Keshav Bhandari</label>
+                </value>
+                <value>
+                    <fullName>Dr. Kripa Khadka</fullName>
+                    <default>false</default>
+                    <label>Dr. Kripa Khadka</label>
+                </value>
+                <value>
+                    <fullName>Dr. Mahesh Panta</fullName>
+                    <default>false</default>
+                    <label>Dr. Mahesh Panta</label>
+                </value>
+                <value>
+                    <fullName>Dr. Menuka Ayer</fullName>
+                    <default>false</default>
+                    <label>Dr. Menuka Ayer</label>
+                </value>
+                <value>
+                    <fullName>Dr. Mina Neupane</fullName>
+                    <default>false</default>
+                    <label>Dr. Mina Neupane</label>
+                </value>
+                <value>
+                    <fullName>Dr. Rajesh Karki</fullName>
+                    <default>false</default>
+                    <label>Dr. Rajesh Karki</label>
+                </value>
+                <value>
+                    <fullName>Dr. Rohan Dhungel</fullName>
+                    <default>false</default>
+                    <label>Dr. Rohan Dhungel</label>
+                </value>
+                <value>
+                    <fullName>Dr. Ruben Khatri</fullName>
+                    <default>false</default>
+                    <label>Dr. Ruben Khatri</label>
+                </value>
+                <value>
+                    <fullName>Dr. Sagar KC</fullName>
+                    <default>false</default>
+                    <label>Dr. Sagar KC</label>
+                </value>
+                <value>
+                    <fullName>Dr. Samjeeb Yadav</fullName>
+                    <default>false</default>
+                    <label>Dr. Samjeeb Yadav</label>
+                </value>
+                <value>
+                    <fullName>Dr. Shiv Narayan Yadav</fullName>
+                    <default>false</default>
+                    <label>Dr. Shiv Narayan Yadav</label>
+                </value>
+                <value>
+                    <fullName>Dr. Sita Jha</fullName>
+                    <default>false</default>
+                    <label>Dr. Sita Jha</label>
+                </value>
+                <value>
+                    <fullName>Dr. Subekshya Katwal</fullName>
+                    <default>false</default>
+                    <label>Dr. Subekshya Katwal</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Allergist</controllingFieldValue>
+                <valueName>Dr. Bhanu Prakash</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Allergist</controllingFieldValue>
+                <valueName>Dr. Bikash Nepal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Anaesthesiologist</controllingFieldValue>
+                <valueName>Dr. Bilash Gautam</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Anaesthesiologist</controllingFieldValue>
+                <valueName>Dr. Bishal Raj</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cardiologist</controllingFieldValue>
+                <valueName>Dr. Gautam Yadav</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cardiologist</controllingFieldValue>
+                <valueName>Dr. Gyanu Prasad</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Gastroenterologist</controllingFieldValue>
+                <valueName>Dr. Himanshu Pradhan</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Gastroenterologist</controllingFieldValue>
+                <valueName>Dr. Hiralal Jadav</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Gastroenterologist</controllingFieldValue>
+                <valueName>Dr. Keshav Bhandari</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Gastroenterologist</controllingFieldValue>
+                <valueName>Dr. Kripa Khadka</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Gastroenterologist</controllingFieldValue>
+                <valueName>Dr. Mahesh Panta</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Gastroenterologist</controllingFieldValue>
+                <valueName>Dr. Menuka Ayer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Neurologist</controllingFieldValue>
+                <valueName>Dr. Mina Neupane</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Neurologist</controllingFieldValue>
+                <valueName>Dr. Rajesh Karki</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Neurologist</controllingFieldValue>
+                <valueName>Dr. Rohan Dhungel</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Ophthalmologist</controllingFieldValue>
+                <valueName>Dr. Ruben Khatri</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Ophthalmologist</controllingFieldValue>
+                <valueName>Dr. Sagar KC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Ophthalmologist</controllingFieldValue>
+                <valueName>Dr. Samjeeb Yadav</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sleep Disorder Specialist</controllingFieldValue>
+                <valueName>Dr. Shiv Narayan Yadav</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sleep Disorder Specialist</controllingFieldValue>
+                <valueName>Dr. Sita Jha</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sleep Disorder Specialist</controllingFieldValue>
+                <valueName>Dr. Subekshya Katwal</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Email_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Email Address</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Gender__c</fullName>
+        <externalId>false</externalId>
+        <label>Gender</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Male</fullName>
+                    <default>false</default>
+                    <label>Male</label>
+                </value>
+                <value>
+                    <fullName>Female</fullName>
+                    <default>false</default>
+                    <label>Female</label>
+                </value>
+                <value>
+                    <fullName>Others</fullName>
+                    <default>false</default>
+                    <label>Others</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Patient_ID__c</fullName>
+        <displayFormat>P-{000}</displayFormat>
+        <externalId>false</externalId>
+        <label>Patient ID</label>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Patient_Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Patient Last Name</label>
+        <length>100</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Patients_Age__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT( ISBLANK(  Date_of_Birth__c  ) ) ,
+IF( DATE( 2000 , MONTH(  Date_of_Birth__c  ) , DAY(  Date_of_Birth__c  ) ) &lt;= DATE( 2000 , MONTH( TODAY() ) , DAY( TODAY() ) ),
+YEAR (Today()) - YEAR (  Date_of_Birth__c  ),
+YEAR (Today()) - YEAR (  Date_of_Birth__c  ) -1 ),
+null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Patients Age</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Select_Appointment_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Select Appointment Date</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Select_Appointment_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Select Appointment Time</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>8:00 AM - 8:30 AM</fullName>
+                    <default>false</default>
+                    <label>8:00 AM - 8:30 AM</label>
+                </value>
+                <value>
+                    <fullName>8:30 AM - 9:00 AM</fullName>
+                    <default>false</default>
+                    <label>8:30 AM - 9:00 AM</label>
+                </value>
+                <value>
+                    <fullName>9:00 AM - 9:30 AM</fullName>
+                    <default>false</default>
+                    <label>9:00 AM - 9:30 AM</label>
+                </value>
+                <value>
+                    <fullName>9:30 AM - 10:00 AM</fullName>
+                    <default>false</default>
+                    <label>9:30 AM - 10:00 AM</label>
+                </value>
+                <value>
+                    <fullName>11:00 AM - 11:30 AM</fullName>
+                    <default>false</default>
+                    <label>11:00 AM - 11:30 AM</label>
+                </value>
+                <value>
+                    <fullName>11:30 AM - 12:00 PM</fullName>
+                    <default>false</default>
+                    <label>11:30 AM - 12:00 PM</label>
+                </value>
+                <value>
+                    <fullName>12:00 PM - 12:30 PM</fullName>
+                    <default>false</default>
+                    <label>12:00 PM - 12:30 PM</label>
+                </value>
+                <value>
+                    <fullName>12:30 PM - 1:00 PM</fullName>
+                    <default>false</default>
+                    <label>12:30 PM - 1:00 PM</label>
+                </value>
+                <value>
+                    <fullName>1:00 PM - 1:30 PM</fullName>
+                    <default>false</default>
+                    <label>1:00 PM - 1:30 PM</label>
+                </value>
+                <value>
+                    <fullName>1:30 PM - 2:00 PM</fullName>
+                    <default>false</default>
+                    <label>1:30 PM - 2:00 PM</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Specialist_Available__c</fullName>
+        <externalId>false</externalId>
+        <label>Specialist Available</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Allergist</fullName>
+                    <default>false</default>
+                    <label>Allergist</label>
+                </value>
+                <value>
+                    <fullName>Anaesthesiologist</fullName>
+                    <default>false</default>
+                    <label>Anaesthesiologist</label>
+                </value>
+                <value>
+                    <fullName>Cardiologist</fullName>
+                    <default>false</default>
+                    <label>Cardiologist</label>
+                </value>
+                <value>
+                    <fullName>Gastroenterologist</fullName>
+                    <default>false</default>
+                    <label>Gastroenterologist</label>
+                </value>
+                <value>
+                    <fullName>Neurologist</fullName>
+                    <default>false</default>
+                    <label>Neurologist</label>
+                </value>
+                <value>
+                    <fullName>Ophthalmologist</fullName>
+                    <default>false</default>
+                    <label>Ophthalmologist</label>
+                </value>
+                <value>
+                    <fullName>Sleep Disorder Specialist</fullName>
+                    <default>false</default>
+                    <label>Sleep Disorder Specialist</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Patient</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Patient_Last_Name__c</columns>
+        <columns>Gender__c</columns>
+        <columns>Doctor_Available__c</columns>
+        <columns>Select_Appointment_Date__c</columns>
+        <columns>Select_Appointment_Time__c</columns>
+        <columns>Patient_ID__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Today_s_Patients_List</fullName>
+        <columns>NAME</columns>
+        <columns>Patient_Last_Name__c</columns>
+        <columns>Gender__c</columns>
+        <columns>Doctor_Available__c</columns>
+        <columns>Select_Appointment_Date__c</columns>
+        <columns>Select_Appointment_Time__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Select_Appointment_Date__c</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Today&apos;s Patients List</label>
+    </listViews>
+    <nameField>
+        <label>Patient  Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Patients</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Age_must_be_greater_than_4</fullName>
+        <active>true</active>
+        <errorConditionFormula>Patients_Age__c &lt; 4</errorConditionFormula>
+        <errorMessage>Patients age must be greater than 4 years of Age. Contact Pediatric hospitalists if Patients age is below 4.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Appointment_Date_Greater_or_Equal</fullName>
+        <active>true</active>
+        <errorConditionFormula>Select_Appointment_Date__c &lt; TODAY()</errorConditionFormula>
+        <errorMessage>How can one create Records for past ? Make sure Appointment Date is properly selected.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Contact_Number_Rule</fullName>
+        <active>true</active>
+        <errorConditionFormula>LEN(Contact_Number__c) &lt;= 6</errorConditionFormula>
+        <errorMessage>Enter Correct Phone Number.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>First_Name_Last_Name</fullName>
+        <active>true</active>
+        <errorConditionFormula>LEN(Name) &lt;= 2  ||  LEN(Patient_Last_Name__c) &lt;=2</errorConditionFormula>
+        <errorMessage>Length of Patients FirstName and Last Name must greater than 2.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

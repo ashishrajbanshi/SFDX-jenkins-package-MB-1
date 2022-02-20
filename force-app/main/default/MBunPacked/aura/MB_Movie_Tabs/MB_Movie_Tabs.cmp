@@ -1,0 +1,22 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <ltng:require styles="{!$Resource.NoHeader}"/>
+    <lightning:card variant="Narrow" >
+        <div Style="background-color:#e6efff;justify-content: center;">
+            <lightning:tabset  selectedTabId="one">
+                <div Style="justify-content: center;">
+                    <div Style="justify-content: center;">
+                        <lightning:tab label="Morning" id="one">
+                            <c:MB_Movie_Show showTime="Morning"/>
+                        </lightning:tab>
+                        <lightning:tab  label="Afternoon" id="two">
+                            <c:MB_Movie_Show  showTime="Afternoon"/>
+                        </lightning:tab>
+                        <lightning:tab  label="Evening" id="three">
+                            <c:MB_Movie_Show showTime="Evening"/>
+                        </lightning:tab>
+                    </div>
+                </div>
+            </lightning:tabset>
+        </div>
+    </lightning:card>   
+</aura:component>

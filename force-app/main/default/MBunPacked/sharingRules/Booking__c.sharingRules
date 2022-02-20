@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Manager_Booking</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Manager Booking</label>
+        <sharedTo>
+            <group>ManagerForMovie</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>User_Booking</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>User Booking</label>
+        <sharedTo>
+            <group>UserforBooking</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>UserforBooking</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

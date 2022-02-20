@@ -1,0 +1,36 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global" controller="MB_Movies_Controller">	    
+    <!-- <aura:method name="submitDR" action="{!c.openEventPopup}"/> -->
+    <aura:attribute name="movie" type="List" description="Holds the selected movie details"/> 
+    <aura:attribute name="movieDetail" type="String" description="Holds the selected movie details"/>    
+    <!--  <aura:handler name="init" value="{!this}" action="{!c.onInit}"/> -->
+    
+    <div class="slds-card" style="height:auto; width:1334px;">
+        <div class="slds-card__body slds-card__body_inner">
+            <lightning:card variant="narrow">
+                <div Style="width:1306px;">                   
+                        <aura:iteration items="{!v.movie}" var="mov">                            
+                            <div Style="display:flex;justify-content:space-around;">                                
+                                <img src="{!mov.Movie__r.Thumbnail__c}" alt="User avatar" style="max-width: 150px;height:250px;"/>
+                                <br/>
+                                <div  Style="margin:auto;padding:10px;">                         
+                                    <ol>
+                                        
+                                        <li Style="font-size:30px;">{!mov.Movie__r.Name}</li>
+                                        <li Style="font-size:18px;">Length: {!mov.Movie__r.Length__c}</li>
+                                        <li Style="font-size:18px;">Director: {!mov.Movie__r.Director__c}</li>
+                                        <li Style="font-size:18px;">Plot: {!mov.Movie__r.Description__c}</li>
+                                        
+                                    </ol>
+                                    <br/>
+                                     <br/>
+                                    <c:MB_Movie_Booking_Form/>
+                                </div>                                                                 
+                            </div>                                                        
+                        </aura:iteration>                        
+                        <!-- Booking Form -->
+                         <!--<c:MB_Movie_Booking_Form/> -->                                         
+                </div>
+            </lightning:card>
+        </div>
+    </div>   
+</aura:component>
