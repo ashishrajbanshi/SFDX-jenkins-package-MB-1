@@ -35,6 +35,9 @@ node{
                     error 'Salesforce test scratch org creation failed.'
                 }
             }
+            catch (err){
+                echo '${err}'
+            }
         }
 
         stage('Display Test Scratch Org'){
