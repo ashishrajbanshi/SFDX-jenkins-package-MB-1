@@ -29,9 +29,11 @@ node{
         }
 
         stage('Create Test Scratch Org'){
-            rc = command "sfdx force:org:create --targetdevhubusername HubOrg --setdefaultusername --definitionfile config/project-scratch-def.json --setalias ciorg --wait 10 --durationdays 1"
-            if (rc != 0){
-                error 'Salesforce test scratch org creation failed.'
+            try{
+                rc = command "sfdx force:org:create --targetdevhubusername ${SF_DEV_HUB_ALIAS} --setdefaultusername --definitionfile config/project-scratch-def.json --setalias ciorg --wait 10 --durationdays 1"
+                if (rc != 0){
+                    error 'Salesforce test scratch org creation failed.'
+                }
             }
         }
 
