@@ -7,6 +7,7 @@ node{
     def SF_USERNAME=env.SF_USERNAME
     def SERVER_KEY_CREDENTALS_ID=env.SERVER_KEY_CREDENTALS_ID
     def SF_DEV_HUB_ALIAS=env.SF_DEV_HUB_ALIAS
+    def SF_SCRATCH_ALIAS=env.SF_SCRATCH_ALIAS
     def SF_INSTANCE_URL = env.SF_INSTANCE_URL ?: "https://login.salesforce.com"
     
     println 'Key is'
@@ -30,7 +31,7 @@ node{
 
         stage('Create Test Scratch Org'){
             try{
-                rc = command "sfdx force:org:create --targetdevhubusername ${SF_DEV_HUB_ALIAS} --setdefaultusername --definitionfile config/project-scratch-def.json --setalias ciorg --wait 10 --durationdays 1"
+                rc = command "sfdx force:org:create --targetdevhubusername ${SF_DEV_HUB_ALIAS} --setdefaultusername --definitionfile config/project-scratch-def.json --setalias ${SF_SCRATCH_ALIAS} --wait 10 --durationdays 1"
                 if (rc != 0){
                     error 'Salesforce test scratch org creation failed.'
                 }
