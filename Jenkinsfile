@@ -43,6 +43,13 @@ node{
             }
         }
 
+        stage('Delete Scratch org'){
+            rc = command "sfdx force:org:delete --targetusername ciorg --noprompt"
+            if (rc != 0){
+                error 'Delete test scratch org.'
+            }
+        }
+
         stage('Create Test Scratch Org'){
             try{
                 rc = command "sfdx force:org:create --targetdevhubusername ${SF_DEV_HUB_ALIAS} --setdefaultusername --definitionfile config/project-scratch-def.json --setalias ${SF_SCRATCH_ALIAS} --wait 10 --durationdays 1"
@@ -61,6 +68,9 @@ node{
                 error 'Salesforce push to test scratch org failed.'
             }
         }
+
+
+
     }
 }
 
