@@ -61,8 +61,21 @@ node{
                 echo '${err}'
             }
         }
+        stage('Generate password for test scratch org'){
+            rc = command "sfdx force:user:password:generate --targetdevhubusername ${SF_USERNAME} --targetusername ciorg --onbehalfof ${SF_SCRATCH_ALIAS}"
+            if(rc!=0){
+                error 'Cannot generate password for scratch org'
+            }
+        }
 
-        stage('Display Test Scratch Org'){
+        stage('Display scratch org'){
+            rc = command "sfdx force:org:display --targetusername ${SF_SCRATCH_ALIAS}"
+            if (rc!=0){
+                error 'Canot display password for scratch org'
+            }
+        }
+
+        stage('Push to Test Scratch Org'){
             rc = command "sfdx force:source:push --targetusername ciorg"
             if (rc != 0){
                 error 'Salesforce push to test scratch org failed.'
