@@ -22,10 +22,24 @@ node{
     }
 
     withCredentials([file(credentialsId: SERVER_KEY_CREDENTALS_ID, variable: 'server_key_file')]) {
+        stage('Logout from devhub'){
+            rc=command "sfdx force:auth:logout -p -u ${SF_USERNAME}"
+            if (rc!=0){
+                error 'Unable to logout.'
+            }
+        }
+        
         stage('Authorize DevHub') {
             rc = command "sfdx force:auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwtkeyfile ${server_key_file} --setdefaultdevhubusername --setalias ${SF_DEV_HUB_ALIAS}"
             if (rc != 0) {
                 error 'Salesforce dev hub org authorization failed.'
+            }
+        }
+
+        stage('View all orgs'){
+            rc=command "sfdx force:org:list"
+            if (rc!=0){
+                error 'Unable to view all orgs.'
             }
         }
 

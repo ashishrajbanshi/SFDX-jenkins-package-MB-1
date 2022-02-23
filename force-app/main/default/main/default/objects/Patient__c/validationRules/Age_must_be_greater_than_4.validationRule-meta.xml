@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Age_must_be_greater_than_4</fullName>
+    <active>true</active>
+    <errorConditionFormula>Patients_Age__c &lt; 4</errorConditionFormula>
+    <errorMessage>Patients age must be greater than 4 years of Age. Contact Pediatric hospitalists if Patients age is below 4.</errorMessage>
+</ValidationRule>

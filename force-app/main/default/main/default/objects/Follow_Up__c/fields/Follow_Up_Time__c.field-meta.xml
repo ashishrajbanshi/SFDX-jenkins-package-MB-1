@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Follow_Up_Time__c</fullName>
+    <externalId>false</externalId>
+    <label>Follow-Up Time</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>3:30 PM - 3:45 PM</fullName>
+                <default>false</default>
+                <label>3:30 PM - 3:45 PM</label>
+            </value>
+            <value>
+                <fullName>3:45 PM - 4:00 PM</fullName>
+                <default>false</default>
+                <label>3:45 PM - 4:00 PM</label>
+            </value>
+            <value>
+                <fullName>4:00 PM - 4:15 PM</fullName>
+                <default>false</default>
+                <label>4:00 PM - 4:15 PM</label>
+            </value>
+            <value>
+                <fullName>4:15 PM - 4:30 PM</fullName>
+                <default>false</default>
+                <label>4:15 PM - 4:30 PM</label>
+            </value>
+            <value>
+                <fullName>4:30 PM - 4:45 PM</fullName>
+                <default>false</default>
+                <label>4:30 PM - 4:45 PM</label>
+            </value>
+            <value>
+                <fullName>4:45 PM - 5:00 PM</fullName>
+                <default>false</default>
+                <label>4:45 PM - 5:00 PM</label>
+            </value>
+            <value>
+                <fullName>5:00 PM - 5:15 PM</fullName>
+                <default>false</default>
+                <label>5:00 PM - 5:15 PM</label>
+            </value>
+            <value>
+                <fullName>5:15 PM - 5:30 PM</fullName>
+                <default>false</default>
+                <label>5:15 PM - 5:30 PM</label>
+            </value>
+            <value>
+                <fullName>5:30 PM - 5:45 PM</fullName>
+                <default>false</default>
+                <label>5:30 PM - 5:45 PM</label>
+            </value>
+            <value>
+                <fullName>5:45 PM - 6:00 PM</fullName>
+                <default>false</default>
+                <label>5:45 PM - 6:00 PM</label>
+            </value>
+            <value>
+                <fullName>6:30 PM - 7:45 PM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>6:30 PM - 7:45 PM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

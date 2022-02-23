@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>can_notBeNull</fullName>
+    <active>true</active>
+    <description>ShowTime can not be null</description>
+    <errorConditionFormula>Len(Name)&lt;1</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Show Time name can not be null</errorMessage>
+</ValidationRule>

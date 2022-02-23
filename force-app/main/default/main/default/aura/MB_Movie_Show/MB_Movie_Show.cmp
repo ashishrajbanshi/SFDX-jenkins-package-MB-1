@@ -1,0 +1,40 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="MB_Movies_Controller">
+    
+    <aura:attribute name="movies" type="List"/>
+    <aura:attribute name="showTime" type="String" default="Morning"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/> 
+    
+    <aura:attribute name="isMovieChecked" type="Boolean" default="false"/>
+    
+    <div style="width:100%">
+        
+        <div class="slds-grid">           
+            <aura:iteration aura:id="image" items="{!v.movies}" var="movie">
+                <div class="slds-col slds-align_absolute-center">
+                    <lightning:card variant="narrow" >
+                        <div class="slds-c-card-radius-border">
+                            <div Style="width:230px;border-radius:5px;">
+                                <div class="slds-align_absolute-center ">
+                                    
+                                    <img  src="{!movie.Movie__r.Thumbnail__c}" alt="User avatar" style="max-width: 200px;height:350px" onclick="{!c.openBooking}" data-id="{!movie.Id}"/>
+                                </div>
+                                <div class="slds-align_absolute-center text_size slds-text-title_bold">
+                                    {!movie.Movie__r.Name}<br/>
+                                 
+                                </div>
+                            </div>
+                        </div>
+                    </lightning:card>
+                </div>
+                
+                
+            </aura:iteration>
+        </div>
+        <br/>
+        <aura:if isTrue="{!v.isMovieChecked}">
+            <div class="slds-col slds-align_absolute-center" >
+                <c:MB_Movie_Booking_Component aura:id="child_cmp" /> 
+            </div>
+        </aura:if>
+    </div> 
+</aura:component>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Name_Last_Name</fullName>
+    <active>true</active>
+    <errorConditionFormula>LEN(Name) &lt;= 2  ||  LEN(Patient_Last_Name__c) &lt;=2</errorConditionFormula>
+    <errorMessage>Length of Patients FirstName and Last Name must greater than 2.</errorMessage>
+</ValidationRule>

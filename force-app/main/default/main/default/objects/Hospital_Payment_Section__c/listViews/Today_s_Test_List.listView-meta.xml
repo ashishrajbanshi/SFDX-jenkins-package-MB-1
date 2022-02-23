@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Today_s_Test_List</fullName>
+    <columns>NAME</columns>
+    <columns>Test_Recommended_by_Doctor__c</columns>
+    <columns>Total_Amount_For_All_Tests__c</columns>
+    <columns>Amounts_Paid__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Today&apos;s Test List</label>
+</ListView>

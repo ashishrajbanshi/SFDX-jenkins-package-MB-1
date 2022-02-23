@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_to_be_Performed__c</fullName>
+    <externalId>false</externalId>
+    <label>Test to be Performed</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Department__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Allergy Skin Testing</fullName>
+                <default>false</default>
+                <label>Allergy Skin Testing</label>
+            </value>
+            <value>
+                <fullName>Blood Testing</fullName>
+                <default>false</default>
+                <label>Blood Testing</label>
+            </value>
+            <value>
+                <fullName>Spirometry</fullName>
+                <default>false</default>
+                <label>Spirometry</label>
+            </value>
+            <value>
+                <fullName>ECG</fullName>
+                <default>false</default>
+                <label>ECG</label>
+            </value>
+            <value>
+                <fullName>Chest X-Ray</fullName>
+                <default>false</default>
+                <label>Chest X-Ray</label>
+            </value>
+            <value>
+                <fullName>MRI</fullName>
+                <default>false</default>
+                <label>MRI</label>
+            </value>
+            <value>
+                <fullName>Computerized Tomography</fullName>
+                <default>false</default>
+                <label>Computerized Tomography</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Allergist</controllingFieldValue>
+            <controllingFieldValue>Sleep Disorder Specialist</controllingFieldValue>
+            <valueName>Allergy Skin Testing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Allergist</controllingFieldValue>
+            <controllingFieldValue>Anaesthesiologist</controllingFieldValue>
+            <controllingFieldValue>Cardiologist</controllingFieldValue>
+            <controllingFieldValue>Gastroenterologist</controllingFieldValue>
+            <controllingFieldValue>Opthalmologist</controllingFieldValue>
+            <controllingFieldValue>Sleep Disorder Specialist</controllingFieldValue>
+            <valueName>Blood Testing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Allergist</controllingFieldValue>
+            <controllingFieldValue>Neurologist</controllingFieldValue>
+            <controllingFieldValue>Sleep Disorder Specialist</controllingFieldValue>
+            <valueName>Spirometry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anaesthesiologist</controllingFieldValue>
+            <controllingFieldValue>Gastroenterologist</controllingFieldValue>
+            <controllingFieldValue>Sleep Disorder Specialist</controllingFieldValue>
+            <valueName>ECG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anaesthesiologist</controllingFieldValue>
+            <controllingFieldValue>Gastroenterologist</controllingFieldValue>
+            <controllingFieldValue>Neurologist</controllingFieldValue>
+            <controllingFieldValue>Sleep Disorder Specialist</controllingFieldValue>
+            <valueName>Chest X-Ray</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cardiologist</controllingFieldValue>
+            <valueName>MRI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cardiologist</controllingFieldValue>
+            <controllingFieldValue>Opthalmologist</controllingFieldValue>
+            <valueName>Computerized Tomography</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

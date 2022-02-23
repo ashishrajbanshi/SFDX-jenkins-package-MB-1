@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <fullName>Booking_Name_greater_two</fullName>
+    <active>true</active>
+    <description>Booking name must be greater than two letters</description>
+    <errorConditionFormula>LEN(Name) &lt; 2</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Booking Name must be greater than two letters</errorMessage>
+</ValidationRule>

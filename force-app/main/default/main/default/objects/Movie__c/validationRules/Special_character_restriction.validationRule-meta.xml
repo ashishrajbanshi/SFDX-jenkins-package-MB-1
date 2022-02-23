@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Special_character_restriction</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT( REGEX( Director__c,&quot;[a-zA-Z]*&quot; ) )</errorConditionFormula>
+    <errorDisplayField>Description__c</errorDisplayField>
+    <errorMessage>Special Characters and Numbers are not allowed.</errorMessage>
+</ValidationRule>

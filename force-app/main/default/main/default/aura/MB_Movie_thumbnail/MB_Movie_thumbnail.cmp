@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="MB_Movies_Controller">
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="thumbnail" type="String" default=""/>    
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <div Style="height:345px;">
+    <lightning:card title="You Are Watching" variant="narrow">
+        <div class="slds-align_absolute-center ">
+	<img src="{!v.thumbnail}" alt="Movie" style="max-width: 170px;height:285px"/>
+            </div>
+   </lightning:card>
+    </div>
+</aura:component>

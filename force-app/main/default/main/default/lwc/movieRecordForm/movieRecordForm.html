@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Add a Movie">
+        <lightning-record-form
+            record-id={recordId}
+            object-api-name={movieObject}
+            fields={myFields}
+            columns="2"
+            oncancel={handleCancel}
+            onsuccess={handleMovieCreated}>
+        </lightning-record-form>
+    </lightning-card>
+</template>
