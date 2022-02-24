@@ -10,10 +10,10 @@
         <default>false</default>
         <visible>true</visible>
     </applicationVisibilities>
-    <classAccesses>
-        <apexClass>MB_Movies_Controller</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
+    <!-- <classAccesses>-->
+    <!--<apexClass>MB_Movies_Controller</apexClass> -->
+    <!--  <enabled>true</enabled> -->
+   <!--  </classAccesses> -->
     <custom>true</custom>
     <fieldPermissions>
         <editable>false</editable>

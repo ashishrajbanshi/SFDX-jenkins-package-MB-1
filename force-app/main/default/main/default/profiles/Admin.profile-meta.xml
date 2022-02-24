@@ -20,22 +20,6 @@
         <field>Booking__c.Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    
-   
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Common_Lab_Tests__c.Result_of_Test_1__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Common_Lab_Tests__c.Result_of_Test_2__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    
-  
-
-
     <fieldPermissions>
         <editable>true</editable>
         <field>Movie__c.Show_Date__c</field>
