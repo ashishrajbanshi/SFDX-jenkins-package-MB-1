@@ -52,14 +52,14 @@
         <flow>Approval_Process_For_Booking</flow>
     </flowAccesses> -->
 
-    <flowAccesses>
+    <!-- <flowAccesses>
         <enabled>false</enabled>
         <flow>Send_Email_for_booking</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Send_Email_on_Booking</flow>
-    </flowAccesses>
+    </flowAccesses> -->
     <flowAccesses>
         <enabled>false</enabled>
         <flow>ShowTime</flow>
