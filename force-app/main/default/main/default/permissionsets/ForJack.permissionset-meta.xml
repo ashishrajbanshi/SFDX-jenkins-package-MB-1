@@ -7,11 +7,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Cat__c.Cat_Breed__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Common_Lab_Tests__c.Patient_Registration_ID__c</field>
         <readable>false</readable>
     </fieldPermissions>
