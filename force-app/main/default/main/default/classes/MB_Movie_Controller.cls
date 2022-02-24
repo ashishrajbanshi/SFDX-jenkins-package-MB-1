@@ -1,7 +1,7 @@
 /**
 * Apex controller for MB Aura and LWC Components
 */ 
-public with sharing class MB_Movies_Controller {
+public with sharing class MB_Movie_Controller {
     
     @AuraEnabled
     public static list<Movie__c> getThumbnail(String movieId){
@@ -41,8 +41,17 @@ public with sharing class MB_Movies_Controller {
         return [SELECT Id,Movie__c,Movie__r.Name,Movie__r.Thumbnail__c,Movie__r.Length__c,Movie__r.Director__c,Movie__r.Description__c FROM Show_Time__c WHERE Time__c  =: showTime AND Show_Time__c =: Date.Today()];
     }
     
-    
-    
+    @AuraEnabled
+    public static list<Show_Time__c> getTodayShow(){        
+        return [SELECT Id,Name,Show_Time__c,Time__c,Movie__r.Name,Movie__r.Thumbnail__c FROM Show_Time__c WHERE Show_Time__c = today];
+        
+    }
+    @AuraEnabled
+    public static list<Show_Time__c> getTomorrowShow(){
+     
+        return [SELECT Id,Name,Show_Time__c,Time__c,Movie__r.Name,Movie__r.Thumbnail__c FROM Show_Time__c WHERE Show_Time__c = Tomorrow];
+        
+    }
     
     @AuraEnabled
     public static Boolean mbSaveRecords(String movieDetails){

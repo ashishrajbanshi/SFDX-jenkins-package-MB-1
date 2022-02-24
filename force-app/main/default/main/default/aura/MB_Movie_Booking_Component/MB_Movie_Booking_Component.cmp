@@ -1,4 +1,4 @@
-<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global" controller="MB_Movies_Controller">	    
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global" controller="MB_Movie_Controller">	    
     <!-- <aura:method name="submitDR" action="{!c.openEventPopup}"/> -->
     <aura:attribute name="movie" type="List" description="Holds the selected movie details"/> 
     <aura:attribute name="movieDetail" type="String" description="Holds the selected movie details"/>    

@@ -73,26 +73,7 @@
         <protected>false</protected>
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
-    <fieldUpdates>
-        <fullName>b3</fullName>
-        <field>Status__c</field>
-        <literalValue>Rejected</literalValue>
-        <name>b3</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>NextValue</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>false</reevaluateOnChange>
-    </fieldUpdates>
-    <fieldUpdates>
-        <fullName>b4</fullName>
-        <field>Status__c</field>
-        <literalValue>Complete</literalValue>
-        <name>b4</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Literal</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>false</reevaluateOnChange>
-    </fieldUpdates>
+   
     <rules>
         <fullName>SendEmailAlert</fullName>
         <actions>

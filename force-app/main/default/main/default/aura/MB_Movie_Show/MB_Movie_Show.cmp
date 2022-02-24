@@ -1,4 +1,4 @@
-<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="MB_Movies_Controller">
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="MB_Movie_Controller">
     
     <aura:attribute name="movies" type="List"/>
     <aura:attribute name="showTime" type="String" default="Morning"/>
