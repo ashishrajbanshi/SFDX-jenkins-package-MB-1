@@ -1,0 +1,1 @@
+This is to notify you Mr.{!Booking__c.OwnerFirstName} that the booking of {!Booking__c.Show_Time__c} under booking name of {!Booking__c.Name} has been booked. Please approve this booking.

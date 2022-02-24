@@ -12,12 +12,6 @@
         <field>Total_Price__c</field>
         <field>Owner</field>
     </approvalPageFields>
-    <approvalStep>
-        <allowDelegate>false</allowDelegate>
-        
-        <label>Step 1</label>
-        <name>Step_1</name>
-    </approvalStep>
     <emailTemplate>unfiled$public/Approve_Booking</emailTemplate>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
     <entryCriteria>

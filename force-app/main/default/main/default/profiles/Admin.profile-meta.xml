@@ -32,37 +32,7 @@
         <field>Common_Lab_Tests__c.Result_of_Test_2__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Common_Lab_Tests__c.Result_of_Test_3__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Common_Lab_Tests__c.Second_Test__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Common_Lab_Tests__c.Test_1__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Common_Lab_Tests__c.Tests_Amount_Paid__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Common_Lab_Tests__c.Third_Test__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Company__c.Conatct_Number__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-
+    
   
 
 
@@ -139,16 +109,7 @@
         <object>Booking__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>BugCaseAssociation__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-
+ 
 
 
     <objectPermissions>

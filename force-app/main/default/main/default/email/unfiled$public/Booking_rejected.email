@@ -1,0 +1,3 @@
+Dear {!Booking__c.Name}, 
+You paid {!Booking__c.Total_Price__c} which is less. So, your booking has been rejected. You can contact to our customer service for further query.
+Thank You.

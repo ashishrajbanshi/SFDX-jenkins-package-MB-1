@@ -1,0 +1,7 @@
+Dear {!Booking__c.Name},
+Your booking has been approved. Enjoy the movie.
+
+Details:
+Show Time: {!Booking__c.Show_Time__c} 
+Seats: {!Booking__c.Seat__c}
+Price: {!Booking__c.Total_Price__c}
