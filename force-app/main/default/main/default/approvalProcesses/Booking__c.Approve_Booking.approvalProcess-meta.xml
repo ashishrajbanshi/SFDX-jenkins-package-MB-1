@@ -14,13 +14,7 @@
     </approvalPageFields>
     <approvalStep>
         <allowDelegate>false</allowDelegate>
-        <assignedApprover>
-            <approver>
-                <name>ashishrajbanshi70@compliancequest.com</name>
-                <type>user</type>
-            </approver>
-            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
-        </assignedApprover>
+        
         <label>Step 1</label>
         <name>Step_1</name>
     </approvalStep>
