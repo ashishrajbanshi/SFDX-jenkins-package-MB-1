@@ -52,10 +52,10 @@
         <readable>true</readable>
     </fieldPermissions>
   
-    <flowAccesses>
+    <!-- <flowAccesses>
         <enabled>false</enabled>
         <flow>Approval_Process_For_Booking</flow>
-    </flowAccesses>
+    </flowAccesses> -->
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Send_Email</flow>
