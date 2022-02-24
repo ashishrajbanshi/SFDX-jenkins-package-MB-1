@@ -1,7 +1,7 @@
 /**
 * Apex controller for MB Aura and LWC Components
 */ 
-public with sharing class MB_Movies_Controller {
+public with sharing class MB_Movie_Controller {
     
     @AuraEnabled
     public static list<Movie__c> getThumbnail(String movieId){

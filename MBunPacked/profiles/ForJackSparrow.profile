@@ -11,7 +11,7 @@
         <visible>false</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>MB_Movies_Controller</apexClass>
+        <apexClass>MB_Movie_Controller</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <custom>true</custom>
