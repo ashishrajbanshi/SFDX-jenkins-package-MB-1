@@ -60,14 +60,14 @@
         <enabled>false</enabled>
         <flow>Send_Email</flow>
     </flowAccesses>
-    <flowAccesses>
+    <!-- <flowAccesses>
         <enabled>false</enabled>
         <flow>Send_Email_for_booking</flow>
-    </flowAccesses>
-    <flowAccesses>
+    </flowAccesses> -->
+    <!-- <flowAccesses>
         <enabled>false</enabled>
         <flow>Send_Email_on_Booking</flow>
-    </flowAccesses>
+    </flowAccesses> -->
     <flowAccesses>
         <enabled>false</enabled>
         <flow>ShowTime</flow>
