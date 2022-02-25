@@ -29,19 +29,19 @@ node{
         //     }
         // }
         
-        // stage('Authorize DevHub') {
-        //     rc = command "sfdx force:auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwtkeyfile ${server_key_file} --setdefaultdevhubusername --setalias ${SF_DEV_HUB_ALIAS}"
-        //     if (rc != 0) {
-        //         error 'Salesforce dev hub org authorization failed.'
-        //     }
-        // }
+        stage('Authorize DevHub') {
+            rc = command "sfdx force:auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwtkeyfile ${server_key_file} --setdefaultdevhubusername --setalias ${SF_DEV_HUB_ALIAS}"
+            if (rc != 0) {
+                error 'Salesforce dev hub org authorization failed.'
+            }
+        }
 
-        // stage('View all orgs'){
-        //     rc=command "sfdx force:org:list"
-        //     if (rc!=0){
-        //         error 'Unable to view all orgs.'
-        //     }
-        // }
+        stage('View all orgs'){
+            rc=command "sfdx force:org:list"
+            if (rc!=0){
+                error 'Unable to view all orgs.'
+            }
+        }
         // stage ('Delete scratch org'){
         //     rc = command "sfdx force:org:delete -u ${SF_SCRATCH_ALIAS} -p"
         // }
@@ -98,9 +98,15 @@ node{
                 error 'cannot list packages'
             }
         }
+        // stage("Delete Package"){
+        //     rc = command "sfdx force:package:delete -p BookMovie --noprompt"
+        //     if(rc!=0){
+        //         error 'Cannot delete package'
+        //     }
+        // }
         
         // stage('Create a pack version'){
-        //     rc = command "sfdx force:package:version:create --package BookMovie --path force-app --installationkey --wait 10 --targetdevhubusername ${SF_DEV_HUB_ALIAS}"
+        //     rc = command "sfdx force:package:version:create --package BookMoviePkg --path force-app --installationkey --wait 10 --targetdevhubusername ${SF_DEV_HUB_ALIAS}"
         //     if (rc!=0){
         //         error 'Cannot create package version.'
         //     }
@@ -117,7 +123,7 @@ node{
             }
 
             // Wait 5 minutes for package replication.
-            sleep 120
+            sleep 300
 
             def jsonSlurper = new JsonSlurperClassic()
             def response = jsonSlurper.parseText(output)
