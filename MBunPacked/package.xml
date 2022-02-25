@@ -88,7 +88,7 @@
         <members>send_Mail_on_Booking</members>
         <name>Flow</name>
     </types>
-    <!-- <types>
+    <types>
         <members>Approval_Process_For_Booking</members>
         <members>Send_Email</members>
         <members>Send_Email_for_booking</members>
@@ -96,7 +96,7 @@
         <members>ShowTime</members>
         <members>send_Mail_on_Booking</members>
         <name>FlowDefinition</name>
-    </types> -->
+    </types>
     <types>
         <members>ManagerForMovie</members>
         <members>UserforBooking</members>
