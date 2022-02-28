@@ -1,19 +1,11 @@
 {
-    "packageDirectories": [
-        {
-            "path": "force-app",
-            "default": true,
-            "package": "MovieBooking",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT"
-        }
-    ],
-    "namespace": "",
-    "oauthLocalPort": "2000",
-    "sfdcLoginUrl": "https://login.salesforce.com",
-    "sourceApiVersion": "53.0",
-    "packageAliases": {
-        "MovieBooking": "0Ho8c0000008OZJCA2",
-        "MovieBooking@0.1.0-6": "04t8c000000tvvEAAQ"
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
     }
+  ],
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "53.0"
 }
