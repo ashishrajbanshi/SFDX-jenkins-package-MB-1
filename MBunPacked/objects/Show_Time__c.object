@@ -237,21 +237,7 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Show Times</pluralLabel>
-    <profileSearchLayouts>
-        <fields>Time__c</fields>
-        <fields>Movie__c</fields>
-        <profileName>Cloned SU</profileName>
-    </profileSearchLayouts>
-    <profileSearchLayouts>
-        <fields>Time__c</fields>
-        <fields>Movie__c</fields>
-        <profileName>ForJackSparrow</profileName>
-    </profileSearchLayouts>
-    <profileSearchLayouts>
-        <fields>Time__c</fields>
-        <fields>Movie__c</fields>
-        <profileName>System Administrator</profileName>
-    </profileSearchLayouts>
+  
     <searchLayouts>
         <searchResultsAdditionalFields>Movie__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Time__c</searchResultsAdditionalFields>
