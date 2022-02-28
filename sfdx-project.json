@@ -1,17 +1,18 @@
 {
-  "packageDirectories": [
-      {
-          "path": "force-app",
-          "default": true,
-          "package": "BookMovie",
-          "versionName": "ver 0.1",
-          "versionNumber": "0.1.0.NEXT"
-      }
-  ],
-  "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "53.0",
-  "packageAliases": {
-      "BookMovie": "0Ho8c0000008OYuCAM"
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": true,
+            "package": "BookMovie",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
+        }
+    ],
+    "namespace": "",
+    "oauthLocalPort" : "1919",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "53.0",
+    "packageAliases": {
+        "BookMovie": "0Ho8c0000008OYuCAM"
+    }
   }
-}

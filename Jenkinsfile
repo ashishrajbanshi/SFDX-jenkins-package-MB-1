@@ -29,12 +29,12 @@ node{
         //     }
         // }
         
-        stage('Authorize DevHub') {
-            rc = command "sfdx force:auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwtkeyfile ${server_key_file} --setdefaultdevhubusername --setalias ${SF_DEV_HUB_ALIAS}"
-            if (rc != 0) {
-                error 'Salesforce dev hub org authorization failed.'
-            }
-        }
+        // stage('Authorize DevHub') {
+        //     rc = command "sfdx force:auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwtkeyfile ${server_key_file} --setdefaultdevhubusername --setalias ${SF_DEV_HUB_ALIAS}"
+        //     if (rc != 0) {
+        //         error 'Salesforce dev hub org authorization failed.'
+        //     }
+        // }
 
         stage('View all orgs'){
             rc=command "sfdx force:org:list"
@@ -98,6 +98,13 @@ node{
                 error 'cannot list packages'
             }
         }
+        
+        // stage('View Limits'){
+        //     rc = command "sfdx force:limits:api:display -u ${SF_USERNAME}"
+        //     if (rc!=0){
+        //         error 'Cannot Display Limits'
+        //     }
+        // }
         // stage("Delete Package"){
         //     rc = command "sfdx force:package:delete -p BookMovie --noprompt"
         //     if(rc!=0){
@@ -105,25 +112,18 @@ node{
         //     }
         // }
         
-        // stage('Create a pack version'){
-        //     rc = command "sfdx force:package:version:create --package BookMoviePkg --path force-app --installationkey --wait 10 --targetdevhubusername ${SF_DEV_HUB_ALIAS}"
-        //     if (rc!=0){
-        //         error 'Cannot create package version.'
-        //     }
-        // }
-        
         
         
         stage('Create Package Version') {
             if (isUnix()) {
-                output = sh returnStdout: true, script: "sfdx force:package:version:create --package ${PACKAGE_NAME} --installationkeybypass --wait 10 --json --targetdevhubusername ${SF_DEV_HUB_ALIAS}"
+                output = sh returnStdout: true, script: "sfdx force:package:version:create  --package ${PACKAGE_NAME} --installationkeybypass --wait 10 --json --targetdevhubusername ${SF_DEV_HUB_ALIAS}"
             } else {
-                output = bat(returnStdout: true, script: "sfdx force:package:version:create --package ${PACKAGE_NAME} --installationkeybypass --wait 10 --json --targetdevhubusername ${SF_DEV_HUB_ALIAS}").trim()
+                output = bat(returnStdout: true, script: "sfdx force:package:version:create  --package ${PACKAGE_NAME} --installationkeybypass --wait 10 --json --targetdevhubusername ${SF_DEV_HUB_ALIAS}").trim()
                 output = output.readLines().drop(1).join(" ")
             }
 
             // Wait 5 minutes for package replication.
-            sleep 300
+            sleep 180
 
             def jsonSlurper = new JsonSlurperClassic()
             def response = jsonSlurper.parseText(output)
@@ -132,7 +132,7 @@ node{
 
             response = null
 
-            echo ${PACKAGE_VERSION}
+            echo PACKAGE_VERSION
         }
 
 
