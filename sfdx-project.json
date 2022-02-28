@@ -9,7 +9,7 @@
       }
   ],
   "namespace": "",
-  "oauthLocalPort" : "1919"
+  "oauthLocalPort" : "1919",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "53.0",
   "packageAliases": {
