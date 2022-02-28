@@ -13,6 +13,6 @@
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "53.0",
     "packageAliases": {
-        "MovieBooking": "0Ho8c0000008OYuCAM",
+        "MovieBooking": "0Ho8c0000008OYuCAM"
     }
 }
