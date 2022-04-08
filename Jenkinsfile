@@ -48,44 +48,44 @@ node{
         // }
 
 
-        // stage('Create Test Scratch Org'){
-        //     try{
-        //         rc = command "sfdx force:org:create --targetdevhubusername ${SF_DEV_HUB_ALIAS} --setdefaultusername --definitionfile config/project-scratch-def.json --setalias ${SF_SCRATCH_ALIAS} --wait 10 --durationdays 1"
-        //         if (rc != 0){
-        //             error 'Salesforce test scratch org creation failed.'
-        //         }
-        //     }
-        //     catch (err){
-        //         echo '${err}'
-        //     }
-        // }
-        // stage('Generate password for test scratch org'){
-        //     rc = command "sfdx force:user:password:generate --targetdevhubusername ${SF_USERNAME} --targetusername ciorg --onbehalfof ${SF_SCRATCH_ALIAS}"
-        //     if(rc!=0){
-        //         error 'Cannot generate password for scratch org'
-        //     }
-        // }
+        stage('Create Test Scratch Org'){
+            try{
+                rc = command "sfdx force:org:create --targetdevhubusername ${SF_DEV_HUB_ALIAS} --setdefaultusername --definitionfile config/project-scratch-def.json --setalias ${SF_SCRATCH_ALIAS} --wait 10 --durationdays 1"
+                if (rc != 0){
+                    error 'Salesforce test scratch org creation failed.'
+                }
+            }
+            catch (err){
+                echo '${err}'
+            }
+        }
+        stage('Generate password for test scratch org'){
+            rc = command "sfdx force:user:password:generate --targetdevhubusername ${SF_USERNAME} --targetusername ciorg --onbehalfof ${SF_SCRATCH_ALIAS}"
+            if(rc!=0){
+                error 'Cannot generate password for scratch org'
+            }
+        }
 
-        // stage('Display scratch org'){
-        //     rc = command "sfdx force:org:display --targetusername ciorg"
-        //     if (rc!=0){
-        //         error 'Canot display password for scratch org'
-        //     }
-        // }
+        stage('Display scratch org'){
+            rc = command "sfdx force:org:display --targetusername ciorg"
+            if (rc!=0){
+                error 'Canot display password for scratch org'
+            }
+        }
 
-        // stage('Push to Test Scratch Org'){
-        //     rc = command "sfdx force:source:push --targetusername ${SF_SCRATCH_ALIAS}"
-        //     if (rc != 0){
-        //         error 'Salesforce push to test scratch org failed.'
-        //     }
-        // }
+        stage('Push to Test Scratch Org'){
+            rc = command "sfdx force:source:push --targetusername ${SF_SCRATCH_ALIAS}"
+            if (rc != 0){
+                error 'Salesforce push to test scratch org failed.'
+            }
+        }
         
-        // stage('Assign the default user in the scratch org'){
-        //     rc = command "sfdx force:user:permset:assign --permsetname ForJack"
-        //     if (rc!=0){
-        //         error 'Failed to assign user.'
-        //     }
-        // }
+        stage('Assign the default user in the scratch org'){
+            rc = command "sfdx force:user:permset:assign --permsetname ForJack"
+            if (rc!=0){
+                error 'Failed to assign user.'
+            }
+        }
         
         // stage("Delete Package"){
         //     rc = command "sfdx force:package:delete -p MovieBooking -n"
@@ -101,19 +101,19 @@ node{
         //     }
         // }
         
-        stage("List packages"){
-            rc = command "sfdx force:package:list"
-            if(rc!=0){
-                error 'cannot list packages'
-            }
-        }
+        // stage("List packages"){
+        //     rc = command "sfdx force:package:list"
+        //     if(rc!=0){
+        //         error 'cannot list packages'
+        //     }
+        // }
         
-        stage('View Limits'){
-            rc = command "sfdx force:limits:api:display -u ${SF_USERNAME}"
-            if (rc!=0){
-                error 'Cannot Display Limits'
-            }
-        }
+        // stage('View Limits'){
+        //     rc = command "sfdx force:limits:api:display -u ${SF_USERNAME}"
+        //     if (rc!=0){
+        //         error 'Cannot Display Limits'
+        //     }
+        // }
 
         
         
@@ -144,42 +144,42 @@ node{
             // Create new scratch org to install package to.
             // -------------------------------------------------------------------------
 
-        stage('Create Package Install Scratch Org') {
-            rc = command "sfdx force:org:create --targetdevhubusername ${SF_DEV_HUB_ALIAS} --setdefaultusername --definitionfile config/project-scratch-def.json --setalias moviebookingOrg --wait 10 --durationdays 1"
-            if (rc != 0) {
-                error 'Salesforce package install scratch org creation failed.'
-            }
-        }
+        // stage('Create Package Install Scratch Org') {
+        //     rc = command "sfdx force:org:create --targetdevhubusername ${SF_DEV_HUB_ALIAS} --setdefaultusername --definitionfile config/project-scratch-def.json --setalias moviebookingOrg --wait 10 --durationdays 1"
+        //     if (rc != 0) {
+        //         error 'Salesforce package install scratch org creation failed.'
+        //     }
+        // }
         
-        stage('Generate password for test scratch org'){
-            rc = command "sfdx force:user:password:generate --targetdevhubusername ${SF_USERNAME} --targetusername moviebookingOrg"
-            if(rc!=0){
-                error 'Cannot generate password for scratch org'
-            }
-        }
+        // stage('Generate password for test scratch org'){
+        //     rc = command "sfdx force:user:password:generate --targetdevhubusername ${SF_USERNAME} --targetusername moviebookingOrg"
+        //     if(rc!=0){
+        //         error 'Cannot generate password for scratch org'
+        //     }
+        // }
 
 
             // -------------------------------------------------------------------------
             // Display install scratch org info.
             // -------------------------------------------------------------------------
 
-        stage('Display Install Scratch Org') {
-            rc = command "sfdx force:org:display --targetusername moviebookingOrg"
-            if (rc != 0) {
-                error 'Salesforce install scratch org display failed.'
-            }
-        }
+        // stage('Display Install Scratch Org') {
+        //     rc = command "sfdx force:org:display --targetusername moviebookingOrg"
+        //     if (rc != 0) {
+        //         error 'Salesforce install scratch org display failed.'
+        //     }
+        // }
         
         // -------------------------------------------------------------------------
         // Install package in scratch org.
         // -------------------------------------------------------------------------
 
-        stage('Install Package In Scratch Org') {
-            rc = command "sfdx force:package:install --package ${PACKAGE_VERSION} --targetusername moviebookingOrg --wait 10"
-            if (rc != 0) {
-                error 'Salesforce package install failed.'
-            }
-        }
+        // stage('Install Package In Scratch Org') {
+        //     rc = command "sfdx force:package:install --package ${PACKAGE_VERSION} --targetusername moviebookingOrg --wait 10"
+        //     if (rc != 0) {
+        //         error 'Salesforce package install failed.'
+        //     }
+        // }
 
 
 
