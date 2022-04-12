@@ -22,6 +22,12 @@ node{
     }
 
     withCredentials([file(credentialsId: SERVER_KEY_CREDENTALS_ID, variable: 'server_key_file')]) {
+        stage('Install sfdx scanner'){
+            rc = command "sfdx plugins:install @salesforce/sfdx-scanner"
+            if (rc!=0){
+                error 'Unable to install scanner'
+            }
+        }
 
     //Check for eslint and pmd 
         stage('Check for Violation rule for lwc'){
