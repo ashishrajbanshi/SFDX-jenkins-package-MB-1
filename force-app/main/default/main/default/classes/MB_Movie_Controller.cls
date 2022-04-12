@@ -23,8 +23,8 @@ public with sharing class MB_Movie_Controller {
     
     @AuraEnabled
     public static list<Movie__c> getMoviesDetail(String movId){
-        Id movieId = (Id) movId;
-        list<Movie__c> movie = [SELECT Id, Name, Description__c, Director__c, Length__c, Thumbnail__c FROM Movie__c WHERE Id =: movieId];
+        Id MovieId = (Id) movId;
+        list<Movie__c> movie = [SELECT Id, Name, Description__c, Director__c, Length__c, Thumbnail__c FROM Movie__c WHERE Id =: MovieId];
         return movie;
     }
     @AuraEnabled

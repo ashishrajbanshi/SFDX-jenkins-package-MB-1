@@ -22,70 +22,86 @@ node{
     }
 
     withCredentials([file(credentialsId: SERVER_KEY_CREDENTALS_ID, variable: 'server_key_file')]) {
-        stage('Logout from devhub'){
-            rc=command "sfdx force:auth:logout -p -u ${SF_USERNAME}"
-            if (rc!=0){
-                error 'Unable to logout.'
-            }
-        }
-        
-        stage('Authorize DevHub') {
-            rc = command "sfdx force:auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwtkeyfile ${server_key_file} --setdefaultdevhubusername --setalias ${SF_DEV_HUB_ALIAS}"
-            if (rc != 0) {
-                error 'Salesforce dev hub org authorization failed.'
+
+    //Check for eslint and pmd 
+        stage('Check for Violation rule for lwc'){
+            rc= command "sfdx scanner:run --target "**/lwc/**" --format "html" --outputfile "G:\INTERN\lwcviolation.html""
+            if(rc!=0){
+                error "Unable to check violation for LWC"
             }
         }
 
-        stage('View all orgs'){
-            rc=command "sfdx force:org:list"
-            if (rc!=0){
-                error 'Unable to view all orgs.'
+        stage('Check for Violation rule for apex classes'){
+            rc= command "sfdx scanner:run --target "**/classes/**" --format "html" --outputfile "G:\INTERN\apexviolation.html""
+            if(rc!=0){
+                error "Unable to check violation for apex classes"
             }
         }
+
+        // stage('Logout from devhub'){
+        //     rc=command "sfdx force:auth:logout -p -u ${SF_USERNAME}"
+        //     if (rc!=0){
+        //         error 'Unable to logout.'
+        //     }
+        // }
         
-        // stage ('Delete scratch org'){
-        //     rc = command "sfdx force:org:delete -u installorg -p"
+        // stage('Authorize DevHub') {
+        //     rc = command "sfdx force:auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwtkeyfile ${server_key_file} --setdefaultdevhubusername --setalias ${SF_DEV_HUB_ALIAS}"
+        //     if (rc != 0) {
+        //         error 'Salesforce dev hub org authorization failed.'
+        //     }
         // }
 
-
-        stage('Create Test Scratch Org'){
-            try{
-                rc = command "sfdx force:org:create --targetdevhubusername ${SF_DEV_HUB_ALIAS} --setdefaultusername --definitionfile config/project-scratch-def.json --setalias ${SF_SCRATCH_ALIAS} --wait 10 --durationdays 1"
-                if (rc != 0){
-                    error 'Salesforce test scratch org creation failed.'
-                }
-            }
-            catch (err){
-                echo '${err}'
-            }
-        }
-        stage('Generate password for test scratch org'){
-            rc = command "sfdx force:user:password:generate --targetdevhubusername ${SF_USERNAME} --targetusername ciorg --onbehalfof ${SF_SCRATCH_ALIAS}"
-            if(rc!=0){
-                error 'Cannot generate password for scratch org'
-            }
-        }
-
-        stage('Display scratch org'){
-            rc = command "sfdx force:org:display --targetusername ciorg"
-            if (rc!=0){
-                error 'Canot display password for scratch org'
-            }
-        }
-
-        stage('Push to Test Scratch Org'){
-            rc = command "sfdx force:source:push --targetusername ${SF_SCRATCH_ALIAS}"
-            if (rc != 0){
-                error 'Salesforce push to test scratch org failed.'
-            }
-        }
+        // stage('View all orgs'){
+        //     rc=command "sfdx force:org:list"
+        //     if (rc!=0){
+        //         error 'Unable to view all orgs.'
+        //     }
+        // }
         
-        stage('Assign the default user in the scratch org'){
-            rc = command "sfdx force:user:permset:assign --permsetname ForJack"
-            if (rc!=0){
-                error 'Failed to assign user.'
-            }
-        }
+        // // stage ('Delete scratch org'){
+        // //     rc = command "sfdx force:org:delete -u installorg -p"
+        // // }
+
+
+        // stage('Create Test Scratch Org'){
+        //     try{
+        //         rc = command "sfdx force:org:create --targetdevhubusername ${SF_DEV_HUB_ALIAS} --setdefaultusername --definitionfile config/project-scratch-def.json --setalias ${SF_SCRATCH_ALIAS} --wait 10 --durationdays 1"
+        //         if (rc != 0){
+        //             error 'Salesforce test scratch org creation failed.'
+        //         }
+        //     }
+        //     catch (err){
+        //         echo '${err}'
+        //     }
+        // }
+        // stage('Generate password for test scratch org'){
+        //     rc = command "sfdx force:user:password:generate --targetdevhubusername ${SF_USERNAME} --targetusername ciorg --onbehalfof ${SF_SCRATCH_ALIAS}"
+        //     if(rc!=0){
+        //         error 'Cannot generate password for scratch org'
+        //     }
+        // }
+
+        // stage('Display scratch org'){
+        //     rc = command "sfdx force:org:display --targetusername ciorg"
+        //     if (rc!=0){
+        //         error 'Canot display password for scratch org'
+        //     }
+        // }
+
+        // stage('Push to Test Scratch Org'){
+        //     rc = command "sfdx force:source:push --targetusername ${SF_SCRATCH_ALIAS}"
+        //     if (rc != 0){
+        //         error 'Salesforce push to test scratch org failed.'
+        //     }
+        // }
+        
+        // stage('Assign the default user in the scratch org'){
+        //     rc = command "sfdx force:user:permset:assign --permsetname ForJack"
+        //     if (rc!=0){
+        //         error 'Failed to assign user.'
+        //     }
+        // }
         
         // stage("Delete Package"){
         //     rc = command "sfdx force:package:delete -p MovieBooking -n"
