@@ -31,14 +31,14 @@ node{
 
     //Check for eslint and pmd 
         stage('Check for Violation rule for lwc'){
-            rc= command "sfdx scanner:run --target "**/lwc/**" --format "html" --outputfile"
+            rc= command "sfdx scanner:run --target "**/lwc/**" --format "html""
             if(rc!=0){
                 error "Unable to check violation for LWC"
             }
         }
 
         stage('Check for Violation rule for apex classes'){
-            rc= command "sfdx scanner:run --target "**/classes/**" --format "html" --outputfile"
+            rc= command "sfdx scanner:run --target "**/classes/**" --format "html""
             if(rc!=0){
                 error "Unable to check violation for apex classes"
             }
