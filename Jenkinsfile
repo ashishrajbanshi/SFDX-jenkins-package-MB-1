@@ -22,7 +22,7 @@ node{
         //     }
         // }
     stage("Authorize a devhub"){
-        sh "sfdx auth:web:login -a ${SF_DEV_HUB_ALIAS} -r ${SF_DEV_INSTANCE_URL} 
+        sh "sfdx auth:web:login -a ${SF_DEV_HUB_ALIAS} -r ${SF_DEV_INSTANCE_URL}"
     }        
 
     stage('Create Test Scratch Org'){
