@@ -25,39 +25,29 @@ node{
         sh "sfdx auth:web:login -a ${SF_DEV_HUB_ALIAS} -r ${SF_DEV_INSTANCE_URL} 
     }        
 
-        stage('Create Test Scratch Org'){
-                sh "sfdx force:org:create --targetdevhubusername ${SF_DEV_HUB_ALIAS} --setdefaultusername --definitionfile config/project-scratch-def.json --setalias ${SF_SCRATCH_ALIAS} --wait 10 --durationdays 1"
-        }
-        stage('Generate password for test scratch org'){
-           sh "sfdx force:user:password:generate --targetdevhubusername ${SF_DEV_HUB_ALIAS} --targetusername ${SF_SCRATCH_ALIAS}"
-        }
-        
-        
+    stage('Create Test Scratch Org'){
+       sh "sfdx force:org:create --targetdevhubusername ${SF_DEV_HUB_ALIAS} --setdefaultusername --definitionfile config/project-scratch-def.json --setalias ${SF_SCRATCH_ALIAS} --wait 10 --durationdays 1"
+    }
+       
+    stage('Generate password for test scratch org'){
+       sh "sfdx force:user:password:generate --targetdevhubusername ${SF_DEV_HUB_ALIAS} --targetusername ${SF_SCRATCH_ALIAS}"
+    }
 
-        stage('Display scratch org'){
-            sh "sfdx force:org:display --targetusername ciorg"
-        }
+    stage('Display scratch org'){
+       sh "sfdx force:org:display --targetusername ciorg"
+    }
 
-        stage('Push to Test Scratch Org'){
-            sh "sfdx force:source:deploy --targetusername ${SF_SCRATCH_ALIAS}"
-        }
+    stage('Push to Test Scratch Org'){
+       sh "sfdx force:source:deploy --targetusername ${SF_SCRATCH_ALIAS}"
+    }
         
-        stage('Assign the default user in the scratch org'){
-            sh "sfdx force:user:permset:assign --permsetname ForJack"
-            }
-        }
-        
-        // stage("Delete Package"){
-        //     rc = command "sfdx force:package:delete -p MovieBooking -n"
-        //     if(rc!=0){
-        //         error 'Cannot delete package'
-        //     }
-        // }
-        
-        stage("Create Package"){
-            sh "sfdx force:package:create --name MovieBooking --description 'You can book movie here' --path force-app --packagetype Managed --targetdevhubusername ${SF_DEV_HUB_ALIAS}"
-  
-        }
+    stage('Assign the default user in the scratch org'){
+       sh "sfdx force:user:permset:assign --permsetname ForJack"
+    }
+
+    stage("Create Package"){
+       sh "sfdx force:package:create --name MovieBooking --description 'You can book movie here' --path force-app --packagetype Managed --targetdevhubusername ${SF_DEV_HUB_ALIAS}"
+    }
 
         // stage('Create Package Version') {
         //     if (isUnix()) {
@@ -121,16 +111,4 @@ node{
         //         error 'Salesforce package install failed.'
         //     }
         // }
-
-
-
-    }
-}
-
-def command(script) {
-    if (isUnix()) {
-        return sh(returnStatus: true, script: script);
-    } else {
-        return bat(returnStatus: true, script: script);
-    }
 }
