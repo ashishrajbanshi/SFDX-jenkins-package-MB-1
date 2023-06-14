@@ -1,10 +1,11 @@
 const fs = require('fs');
 const path = require('path');
+const { mkdirp } = require('mkdirp')
 
 function copyDirectory(source, destination) {
-  if (!fs.existsSync(destination)) {
-    fs.mkdirSync(destination);
-  }
+    if (!fs.existsSync(destination)) {
+        mkdirp.sync(destination);
+    }
 
   const files = fs.readdirSync(source);
 
@@ -21,7 +22,8 @@ function copyDirectory(source, destination) {
           return;
         }
 
-        const modifiedData = data.replace(/__c/g, '__r');
+        const reg = /(\w+)(\__c)/g;
+        const modifiedData = data.replace(reg,`compliancequest__$1$2`);
 
         fs.writeFile(destinationPath, modifiedData, 'utf8', (err) => {
           if (err) {
@@ -35,9 +37,7 @@ function copyDirectory(source, destination) {
   });
 }
 
-// Usage example:
 const sourceDir = '../force-app';
 const destinationDir = 'bin/force-app';
-fs.mkdirSync(destinationDir);
 
 copyDirectory(sourceDir, destinationDir);
