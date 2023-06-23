@@ -1,0 +1,5 @@
+Dear {!compliancequest__Booking__c.Name},
+Your booking has been sent for approval. 
+Show Time: {!compliancequest__Booking__c.compliancequest__Show_Time__c} 
+Seats: {!compliancequest__Booking__c.compliancequest__Seat__c}
+Price: {!compliancequest__Booking__c.compliancequest__Total_Price__c}

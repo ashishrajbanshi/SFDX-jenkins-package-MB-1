@@ -1,0 +1,1 @@
+This is to notify you Mr.{!compliancequest__Booking__c.OwnerFirstName} that the booking of {!compliancequest__Booking__c.compliancequest__Show_Time__c} under booking name of {!compliancequest__Booking__c.Name} has been booked. Please approve this booking.
