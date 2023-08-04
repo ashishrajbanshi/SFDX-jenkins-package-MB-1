@@ -19,7 +19,7 @@
         {
           "filename": "force-app/main/default/applications/Movie_Booking.app-meta.xml",
           "stringToReplace": "STRING_TO_CHANGE",
-          "replaceWithEnv": "STRING"
+          "replaceWithEnv": "STRING_ENV"
         }
       ]
 }
